@@ -1,0 +1,16 @@
+name: CI Workflow
+
+on:
+  push:
+    branches: [ development ]  # akan berjalan saat push ke development
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout source code
+      uses: actions/checkout@v3
+
+    - name: Print Hello
+      run: echo "Workflow berhasil jalan ✅"
