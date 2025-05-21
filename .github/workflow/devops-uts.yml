@@ -1,0 +1,16 @@
+name: DevOps UTS Workflow
+
+on:
+  push:
+    branches:
+      - development  # Workflow jalan saat push ke branch ini
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Run Tes Sederhana
+        run: echo "✅ Workflow berjalan setelah push ke development"
